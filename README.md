@@ -1,9 +1,9 @@
-# Rust Blinky for the STM32 F4 via DFU
+# Rust Blinky for the STM32 F4 via DFU (no STLink!)
 I wrote this in the process of learning how to use the "HiLetgo STM32 F4VE"
 development board, which has the STM32F407VET6 hooked up to a USB port. This
 combination makes it easy to program the board by booting into DFU mode and
-transferring the ELF file over USB, so I decided to implement good ol' blinky
-to demonstrate how.
+transferring the ELF file over USB, without needing an STLink dongle. I 
+decided to implement good ol' blinky to demonstrate how.
 
 ## Prerequisites
 - Rust with the `thumbv7em-none-eabihf` target installed (`rustup target add thumbv7em-none-eabihf`)
