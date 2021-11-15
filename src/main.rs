@@ -2,7 +2,6 @@
 #![no_std]
 
 extern crate cortex_m;
-extern crate cortex_m_rt;
 extern crate cortex_m_rt_macros;
 
 extern crate panic_itm as _;
