@@ -10,7 +10,7 @@ decided to implement good ol' blinky to demonstrate how.
   - At the time of creating this repo, I had to use `+nightly` features
 - [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
 installed and on your `PATH`
-- `cargo install cargo-make` (optional)
+- `cargo install cargo-make`
   - I tested this process on Windows, so you may need to tweak the command in 
   [`Makefile.toml`](./Makefile.toml) to fit your dev environment.
 
@@ -37,8 +37,8 @@ quickly slap together a simple boot mode selector jig so you aren't constantly
 fumbling with taking a jumper on and off and pressing a tiny reset button.
 
 I took a ~50x50mm section of snap-apart protoboard and wired up 4 dupont cables 
-to connect to the dev board: `+3V3`, `GND`, `BT0`, and `RST`. There is an easy-
-to-access `RST` pin on the bottom right of the `OLD-TFT` header, on the edge
+to connect to the dev board: `+3V3`, `GND`, `BT0`, and `RST`. There is an 
+easy-to-access `RST` pin on the bottom right of the `OLD-TFT` header, on the edge
 of the board next to the `K0` button. 
 
 The jig has two nice big push buttons, one for `BT0` (which is normally pulled
