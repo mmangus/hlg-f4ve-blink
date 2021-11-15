@@ -42,5 +42,6 @@ of the board next to the `K0` button.
 The jig has two nice big push buttons, one for `BT0` (which is normally pulled
 low by a 20k resistor) and the other for `RST` (which is normally pulled high by 
 a 20k resistor). When I want to enter the system boot mode for DFU, I hold down 
-the `BT0` button and tap `RST`. You don't have to hold `BT0` the whole time - 
-the little fanfare that plays on Windows will let you know you can release `BT0`.
+the `BT0` button (connecting it to `3V3`) and tap `RST` (connecting it to `GND`).
+You don't have to hold `BT0` the whole time - the little fanfare that plays on
+Windows will let you know you can release `BT0`.
