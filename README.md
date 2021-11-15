@@ -45,5 +45,4 @@ a 20k resistor). When I want to enter the system boot mode for DFU, I hold down
 the `BT0` button and tap `RST`. You don't have to hold `BT0` the whole time - 
 the little fanfare that plays on Windows will let you know you can release `BT0`.
 
-![image](https://user-images.githubusercontent.com/89292/141735106-89fba294-0c1d-4723-a7b8-bad572e9442c.png)
-
+![image](https://user-images.githubusercontent.com/89292/141735295-442d5c44-02bf-4f22-a772-0e768db576b5.png)
