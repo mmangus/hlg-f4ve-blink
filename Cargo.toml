@@ -1,0 +1,44 @@
+cargo-features = ["different-binary-name"]
+
+[package]
+name = "hlg-f4ve-blink"
+version = "0.0.1"
+authors = ["Michael Mangus <contact@michaelmang.us>"]
+description = "Learning to blink the HiLetGo STM32 F407VE development board"
+keywords = ["arm", "cortex-m", "blinky", "stm32f4"]
+categories = ["embedded", "no-std"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mmangus/hlg-f4ve-blink"
+
+[dependencies.cortex-m]
+version = "0.5.0"
+
+[dependencies.cortex-m-rt]
+version = "0.5.0"
+
+[dependencies.cortex-m-rt-macros]
+version = "0.7.0"
+
+[dependencies.embedded-hal]
+version = "0.2"
+
+[dependencies.nb]
+version = "1"
+
+[dependencies.stm32f4xx-hal]
+version = "0.10"
+features = ["rt", "stm32f407"]
+
+[dependencies.cortex-m-semihosting]
+version = "0.3.0"
+
+[dependencies.stm32f407g-disc]
+version = "0.4.1"
+
+[dependencies.panic-itm]
+version = "0.4.2"
+
+[[bin]]
+name = "blink"
+filename = "blink.elf"
+path = "src/main.rs"

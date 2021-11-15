@@ -1,0 +1,14 @@
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+[tasks.build]
+command = "cargo"
+args = ["build"]
+dependencies = ["format"]
+
+[tasks.flash]
+command = "STM32_Programmer_CLI"
+args = ["-c", "port=usb1", "-d", "target\\thumbv7em-none-eabihf\\debug\\blink.elf"]
+dependencies = ["build"]
