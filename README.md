@@ -1,5 +1,5 @@
 # Rust Blinky for the STM32 F4 via DFU (no STLink!)
-I wrote this in the process of learning how to use the "HiLetgo STM32 F4VE"
+I wrote this in the process of learning how to use the HiLetgo STM32 F4VE
 development board, which has the STM32F407VET6 hooked up to a USB port. This
 combination makes it easy to program the board by booting into DFU mode and
 transferring the ELF file over USB, without needing an STLink dongle. I 
