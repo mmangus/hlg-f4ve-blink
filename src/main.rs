@@ -3,18 +3,16 @@
 
 extern crate cortex_m;
 extern crate cortex_m_rt_macros;
-
 extern crate panic_itm as _;
 extern crate stm32f4xx_hal as hal;
 
+use cortex_m::peripheral::Peripherals;
 use cortex_m_rt_macros::entry;
 use hal::delay::Delay;
 use hal::gpio;
 use hal::gpio::gpioa::{PA6, PA7};
 use hal::prelude::*;
 use hal::stm32;
-
-use cortex_m::peripheral::Peripherals;
 
 struct Leds {
     a: PA6<gpio::Output<gpio::PushPull>>,
