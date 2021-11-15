@@ -10,8 +10,10 @@ decided to implement good ol' blinky to demonstrate how.
   - At the time of creating this repo, I had to use `+nightly` features
 - [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
 installed and on your `PATH`
+- `cargo install cargo-make` (optional)
   - I tested this process on Windows, so you may need to tweak the command in 
   [`Makefile.toml`](./Makefile.toml) to fit your dev environment.
+
 
 ## Programming
 1. Plug the USB cable into the development board

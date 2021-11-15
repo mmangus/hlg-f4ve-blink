@@ -5,16 +5,15 @@ extern crate cortex_m;
 extern crate cortex_m_rt;
 extern crate cortex_m_rt_macros;
 
-extern crate embedded_hal as hal;
 extern crate panic_itm as _;
-extern crate stm32f4xx_hal;
+extern crate stm32f4xx_hal as hal;
 
 use cortex_m_rt_macros::entry;
-use stm32f4xx_hal::delay::Delay;
-use stm32f4xx_hal::gpio;
-use stm32f4xx_hal::gpio::gpioa::{PA6, PA7};
-use stm32f4xx_hal::prelude::*;
-use stm32f4xx_hal::stm32;
+use hal::delay::Delay;
+use hal::gpio;
+use hal::gpio::gpioa::{PA6, PA7};
+use hal::prelude::*;
+use hal::stm32;
 
 use cortex_m::peripheral::Peripherals;
 
