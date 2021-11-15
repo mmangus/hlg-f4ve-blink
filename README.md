@@ -48,7 +48,7 @@ low by a 20k resistor) and the other for `RST` (which is normally pulled high by
 a 20k resistor). When I want to enter the system boot mode for DFU, I hold down
 the `BT0` button (connecting it to `3V3`) and tap `RST` (connecting it to `GND`).
 You don't have to hold `BT0` the whole time - the little fanfare that plays on
-Windows will let you know you can release `BT0`.
+Windows when a new USB device is connected will let you know you can release `BT0`.
 
 ![image](https://user-images.githubusercontent.com/89292/141735295-442d5c44-02bf-4f22-a772-0e768db576b5.png)
 
