@@ -7,7 +7,7 @@ authors = ["Michael Mangus <contact@michaelmang.us>"]
 description = "Learning to blink the HiLetGo STM32 F407VE development board"
 keywords = ["arm", "cortex-m", "blinky", "stm32f4"]
 categories = ["embedded", "no-std"]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 repository = "https://github.com/mmangus/hlg-f4ve-blink"
 
 [dependencies.cortex-m]
