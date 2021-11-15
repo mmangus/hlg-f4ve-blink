@@ -17,7 +17,9 @@ installed and on your `PATH`
 
 ## Programming
 1. Plug the USB cable into the development board
-2. Connect the `BT0` pin to `3V3` and reset the board (tap the `RST`
+   - You may need to use [Zadig](https://zadig.akeo.ie/) to install the 
+     libusb driver to get your computer to recognize the board. 
+3. Connect the `BT0` pin to `3V3` and reset the board (tap the `RST`
    button)
    - `BT0` is adjacent to `3V3` on the dev board, so you can just use on a 
      jumper or a dupont wire.
