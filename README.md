@@ -21,14 +21,14 @@ installed and on your `PATH`
      libusb driver to get your computer to recognize the board. 
 3. Connect the `BT0` pin to `3V3` and reset the board (tap the `RST`
    button)
-   - `BT0` is adjacent to `3V3` on the dev board, so you can just use on a 
+   - `BT0` is adjacent to `3V3` on the dev board, so you can just use a 
      jumper or a dupont wire.
+   - You might need to tap `RST` a couple times before DFU mode will start; it can
+     be a little finicky.
    - [STM AN2606](https://www.st.com/resource/en/application_note/cd00167594-stm32-microcontroller-system-memory-boot-mode-stmicroelectronics.pdf)
      (pp. 119-129) shows that the STM32F407 will enter DFU mode when Boot0
      is high, Boot1 is low, and there is a USB cable detected (but no USART or
      CAN connection).
-   - You might need to tap `RST` a few times before DFU mode will start; it can
-     be a little finicky.
 3. Run `cargo make flash`
 4. Disconnect `BT0` from `3V3` and tap `RST` again to reboot into User mode
 5. Marvel at the blinking lights
