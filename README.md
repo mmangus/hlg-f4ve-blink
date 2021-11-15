@@ -25,8 +25,7 @@ installed and on your `PATH`
    - You might need to tap `RST` a few times before DFU mode will start; it can
      be a little finicky.
 2. Run `cargo make flash`
-3. Remove the jumper from `BT0` to `3V3` and tap `RST` again to reboot into 
-   User mode
+3. Disconnect `BT0` from `3V3` and tap `RST` again to reboot into User mode
 4. Marvel at the blinking lights
 
 ## Boot mode selector jig
