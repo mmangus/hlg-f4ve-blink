@@ -14,7 +14,8 @@ installed and on your `PATH`
   [`Makefile.toml`](./Makefile.toml) to fit your dev environment.
 
 ## Programming
-1. Connect the `BT0` pin to `3V3` and reset the board (tap the `RST`
+1. Plug the USB cable into the development board
+2. Connect the `BT0` pin to `3V3` and reset the board (tap the `RST`
    button)
    - `BT0` is adjacent to `3V3` on the dev board, so you can just use on a 
      jumper or a dupont wire.
@@ -24,9 +25,9 @@ installed and on your `PATH`
      CAN connection).
    - You might need to tap `RST` a few times before DFU mode will start; it can
      be a little finicky.
-2. Run `cargo make flash`
-3. Disconnect `BT0` from `3V3` and tap `RST` again to reboot into User mode
-4. Marvel at the blinking lights
+3. Run `cargo make flash`
+4. Disconnect `BT0` from `3V3` and tap `RST` again to reboot into User mode
+5. Marvel at the blinking lights
 
 ## Boot mode selector jig
 If you plan to program the board a lot, you might find it worthwhile to
