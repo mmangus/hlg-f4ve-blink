@@ -19,7 +19,7 @@ installed and on your `PATH`
    button)
    - `BT0` is adjacent to `3V3` on the dev board, so you can just use on a 
      jumper or a dupont wire.
-   - [STM AN26-6](https://www.st.com/resource/en/application_note/cd00167594-stm32-microcontroller-system-memory-boot-mode-stmicroelectronics.pdf)
+   - [STM AN2606](https://www.st.com/resource/en/application_note/cd00167594-stm32-microcontroller-system-memory-boot-mode-stmicroelectronics.pdf)
      (pp. 119-129) shows that the STM32F407 will enter DFU mode when Boot0
      is high, Boot1 is low, and there is a USB cable detected (but no USART or
      CAN connection).
