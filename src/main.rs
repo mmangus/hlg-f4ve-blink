@@ -12,7 +12,10 @@ use hal::delay::Delay;
 use hal::gpio;
 use hal::gpio::gpioa::{PA6, PA7};
 use hal::prelude::*;
+use hal::serial;
 use hal::stm32;
+
+use core::fmt::Write;
 
 struct Leds {
     a: PA6<gpio::Output<gpio::PushPull>>,
@@ -24,23 +27,32 @@ fn main() -> ! {
     if let (Some(p), Some(cp)) =
         (stm32::Peripherals::take(), Peripherals::take())
     {
-        let gpioa = p.GPIOA.split();
+        // Constrain clock registers
+        let rcc = p.RCC.constrain();
+        // Configure clock to 168 MHz (i.e. the maximum) and freeze it
+        let clocks = rcc.cfgr.sysclk(168.mhz()).freeze();
 
         // Configure LED outputs
+        let gpioa = p.GPIOA.split();
         let mut leds = Leds {
             a: gpioa.pa6.into_push_pull_output(),
             b: gpioa.pa7.into_push_pull_output(),
         };
 
-        // Constrain clock registers
-        let rcc = p.RCC.constrain();
-
-        // Configure clock to 168 MHz (i.e. the maximum) and freeze it
-        let clocks = rcc.cfgr.sysclk(168.mhz()).freeze();
-
         // Get delay provider
         let mut delay = Delay::new(cp.SYST, &clocks);
 
+        // Start up UART
+        let tx_pin = gpioa.pa9.into_alternate();
+        let mut uart = serial::Serial::tx(
+            p.USART1,
+            tx_pin,
+            serial::config::Config::default().baudrate(9_600.bps()),
+            clocks,
+        )
+        .unwrap();
+
+        let mut i: u32 = 0;
         loop {
             // only A on
             leds.a.set_low();
@@ -55,6 +67,9 @@ fn main() -> ! {
             // both off
             leds.b.set_high();
             delay.delay_ms(250_u16);
+
+            writeln!(uart, "{}\r", i);
+            i += 1;
         }
     }
 
