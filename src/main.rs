@@ -1,8 +1,6 @@
 #![no_main]
 #![no_std]
 
-extern crate cortex_m;
-extern crate cortex_m_rt_macros;
 extern crate panic_itm as _;
 extern crate stm32f4xx_hal as hal;
 
