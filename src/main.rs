@@ -24,6 +24,11 @@ fn main() -> ! {
     if let (Some(p), Some(cp)) =
         (stm32::Peripherals::take(), Peripherals::take())
     {
+        // Constrain clock registers
+        let rcc = p.RCC.constrain();
+        // Configure clock to 168 MHz (i.e. the maximum) and freeze it
+        let clocks = rcc.cfgr.sysclk(168.mhz()).freeze();
+
         let gpioa = p.GPIOA.split();
 
         // Configure LED outputs
@@ -31,12 +36,6 @@ fn main() -> ! {
             a: gpioa.pa6.into_push_pull_output(),
             b: gpioa.pa7.into_push_pull_output(),
         };
-
-        // Constrain clock registers
-        let rcc = p.RCC.constrain();
-
-        // Configure clock to 168 MHz (i.e. the maximum) and freeze it
-        let clocks = rcc.cfgr.sysclk(168.mhz()).freeze();
 
         // Get delay provider
         let mut delay = Delay::new(cp.SYST, &clocks);
