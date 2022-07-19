@@ -3,7 +3,8 @@ I wrote this in the process of learning how to use the HiLetgo STM32 F4VE
 development board, which has the STM32F407VET6 hooked up to a USB port. This
 combination makes it easy to program the board by booting into DFU mode and
 transferring the ELF file over USB, without needing an STLink dongle. I 
-decided to implement good ol' blinky to demonstrate how.
+decided to implement good ol' blinky to demonstrate how. I based my work on
+the excellent tools provided by [rust-embedded](https://github.com/rust-embedded/cortex-m-quickstart).
 
 ## Prerequisites
 - [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
